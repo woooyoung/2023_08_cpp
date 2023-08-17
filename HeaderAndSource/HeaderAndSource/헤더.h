@@ -1,7 +1,7 @@
-#include <cstdio>
+ï»¿#include <cstdio>
 #include <cmath> // sin(), cos(), tan(), exp(), pow(), round()
 #include <cstdlib> // malloc, free, rand
-#include <ctime> // time, clock -> ÀÇ»ç ³­¼ö ½Ãµå ¼³Á¤
+#include <ctime> // time, clock -> ì˜ì‚¬ ë‚œìˆ˜ ì‹œë“œ ì„¤ì •
 
 struct Person {
 	int age;

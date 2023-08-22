@@ -6,12 +6,32 @@
 #include <cmath>
 #include <ctime>
 
+int number_count = 1;
+
 class Empoloyee {
 public:
 	int number;
-	char name[100];
+	//char name[100];
+	char* name;
 	int gender;
-	char rank[100];
+	//char rank[100];
+	char* rank;
+
+	Empoloyee(char* name, int gender, char* rank) {
+		this->name = new char[strlen(name) + 1]; // 널문자까지
+		this->rank = new char[strlen(rank) + 1];
+		strcpy(this->name, name);
+		this->gender = gender;
+		strcpy(this->rank, rank);
+		this->number = number_count;
+
+		number_count++;
+	}
+
+	~Empoloyee() {
+		delete[] name; 
+		delete[] rank;
+	}
 
 	void printInfo() {
 		printf("사원번호 : %d\n", number);
